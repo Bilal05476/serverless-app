@@ -9,6 +9,7 @@ const LinkList = ({ links, refreshLinks }) => {
           .map((link) => (
             <LinkCard link={link} key={link._id} refreshLinks={refreshLinks} />
           ))}
+      <hr />
       <h2 className="my-4">Archived Links</h2>
       {links &&
         links
@@ -16,6 +17,7 @@ const LinkList = ({ links, refreshLinks }) => {
           .map((link) => (
             <LinkCard link={link} key={link._id} refreshLinks={refreshLinks} />
           ))}
+      <hr />
     </div>
   );
 };

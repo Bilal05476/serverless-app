@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import LinkList from "./components/LinkList";
+import ListForm from "./components/ListForm";
 
 function App() {
   const [dataLinks, setDataLinks] = useState([]);
@@ -15,8 +16,9 @@ function App() {
   }, []);
   return (
     <div className="container py-5">
-      <h2 className="text-center mb-5">List 0 Link</h2>
+      <h2 className="text-center mb-5">List of Link</h2>
       <LinkList links={dataLinks} refreshLinks={loadLinks} />
+      <ListForm refreshLinks={loadLinks} />
     </div>
   );
 }
