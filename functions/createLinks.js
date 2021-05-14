@@ -4,7 +4,7 @@ const formatedResponse = require("./utils/formatedResponse");
 
 exports.handler = async (event) => {
   const { name, url, description } = JSON.parse(event.body);
-  const variables = { name, url, description, archived: true };
+  const variables = { name, url, description, archived: false };
   try {
     const { createLink: createdLink } = await sendQuery(
       CREATE_LINKS,

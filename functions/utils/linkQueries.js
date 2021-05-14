@@ -13,7 +13,7 @@ query{
 
 const CREATE_LINKS = `
 mutation($name: String!, $url: String!, $description: String!){
-  createLink(data: {name: $name, url: $url, description: $description, archived: true})
+  createLink(data: {name: $name, url: $url, description: $description, archived: false})
   {
     name
     url
