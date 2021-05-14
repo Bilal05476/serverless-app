@@ -1,4 +1,4 @@
-export default function LinkCard({ link, refreshLinks }) {
+export default function ArchivedCard({ link, refreshLinks }) {
   const archiveLink = async () => {
     link.archived = !link.archived;
     try {
@@ -34,7 +34,7 @@ export default function LinkCard({ link, refreshLinks }) {
       </div>
       <div className="card-footer">
         <button className="btn btn-warning mt-2" onClick={archiveLink}>
-          Archive
+          Unarchived
         </button>
         <button className="btn btn-danger mt-2 mx-2" onClick={deleteLink}>
           Delete

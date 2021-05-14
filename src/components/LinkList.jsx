@@ -1,3 +1,4 @@
+import ArchivedCard from "./ArchivedCard";
 import LinkCard from "./LinkCard";
 const LinkList = ({ links, refreshLinks }) => {
   return (
@@ -15,7 +16,11 @@ const LinkList = ({ links, refreshLinks }) => {
         links
           .filter((link) => link.archived)
           .map((link) => (
-            <LinkCard link={link} key={link._id} refreshLinks={refreshLinks} />
+            <ArchivedCard
+              link={link}
+              key={link._id}
+              refreshLinks={refreshLinks}
+            />
           ))}
       <hr />
     </div>

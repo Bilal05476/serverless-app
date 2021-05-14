@@ -9,7 +9,7 @@ const ListForm = ({ refreshLinks }) => {
     e.preventDefault();
     const body = { name, description, url };
     try {
-      const res = await fetch("/api/createLinks", {
+      const res = await fetch("/.netlify/functions/createLinks", {
         method: "POST",
         body: JSON.stringify(body),
       });
