@@ -26,7 +26,7 @@ export default function LinkCard({ link, refreshLinks }) {
   };
 
   return (
-    <div className="card my-5">
+    <div className="card my-5" data-aos="zoom-in">
       <div className="card-header">{link.name}</div>
       <div className="card-body">
         <a href={link.url}>{link.url}</a>
